@@ -30,3 +30,4 @@ if you want do all commands to json file you can do like that **{
 ***if i have a lot of stars at this repository i add command at this command you can apload your files with your values and command to reconect bot***
 
 
+> *you can delete at main.py file (input = str(input("Token: "))) and put token at the json/env/ini/txt file*
