@@ -23,6 +23,7 @@ class Terminall_Commands:
         # Список команд с описаниями
         command_list = [
             {"name": "info", "description": "Показывает информацию о пользователе"},
+            {"name": "server", "description": "Показывает информацию о сервере"}
         ]
         
         embed = Embed(title="Лист команд 1 разряда", colour=Colour.green())
@@ -31,7 +32,7 @@ class Terminall_Commands:
         for i, command in enumerate(command_list, start=1):
             embed.add_field(
                 name=f"Команда {i}",
-                value=f"name: {command['name']}\n description: {command['description']}",
+                value=f"・name: {command['name']}\n・description: {command['description']}",
                 inline=False
             )
 

@@ -20,6 +20,8 @@ class Terminal(Modal):
         commands_of_terminal = TerminalCommands(self.bot)
         if command_value in ["info", "Info", "info ", "Info "]:
               await commands_of_terminal.info(interaction=interaction)
+        elif command_value in ["server", "Server", "Server ", "server "]:
+            await commands_of_terminal.server(interaction=interaction)
             
         else:
             await interaction.response.send_message(content=f"Команда **{command_value}** не найдена", ephemeral=True)
