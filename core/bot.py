@@ -26,6 +26,8 @@ class Bot(commands.AutoShardedBot):
     async def on_connect(self):
         sync = await self.tree.sync()
         print(f"Synced commands: {len(sync)}")
+        self.remove_command("help")
+        print("Removing command help")
     
     async def setup_hook(self) -> None:
         for filename in os.listdir("./cogs"):
