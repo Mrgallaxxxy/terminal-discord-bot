@@ -20,11 +20,19 @@ class Terminall_Commands:
         self.bot = bot
     
     async def first_commands(self, interaction: Interaction):
-        command_list = ["info"]  
-        embed = discord.Embed(title="Лист команд 1 разряда", colour=Colour.green())
+        # Список команд с описаниями
+        command_list = [
+            {"name": "info", "description": "Показывает информацию о пользователе"},
+        ]
         
+        embed = Embed(title="Лист команд 1 разряда", colour=Colour.green())
+        
+        # Перебираем список команд и добавляем их в Embed
+        for i, command in enumerate(command_list, start=1):
+            embed.add_field(
+                name=f"Команда {i}",
+                value=f"name: {command['name']}\n description: {command['description']}",
+                inline=False
+            )
 
-        for i, command in enumerate(command_list, start=1):  
-            embed.add_field(name=f"Команда {i}", value=command, inline=False)  
-
-        await interaction.response.edit_message(embed=embed, content=None, view=None, attachments=None)
+        await interaction.response.edit_message(embed=embed, content=None, view=None)

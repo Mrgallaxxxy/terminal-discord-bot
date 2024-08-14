@@ -39,4 +39,4 @@ class HelpButton(View):
         custom_id="list"
     )
     async def list(self, inter: Interaction, button: Button):
-        await inter.response.edit_message(embed=Embed(title="Список команд", description=f"> снизу нажав на кнопку вы **можете** выбрать разряд команд для **просмотра"), view=LvlButtons(self.bot))
+        await inter.response.edit_message(embed=Embed(title="Список команд", description=f"> снизу нажав на кнопку вы **можете** выбрать разряд команд для **просмотра**"), view=LvlButtons(self.bot))
